@@ -1,0 +1,298 @@
+repmgr_funcs.o: repmgr_funcs.c \
+ /data/adb3.1/app/include/postgresql/server/postgres.h \
+ /data/adb3.1/app/include/postgresql/server/c.h \
+ /data/adb3.1/app/include/postgresql/server/postgres_ext.h \
+ /data/adb3.1/app/include/postgresql/server/pg_config_ext.h \
+ /data/adb3.1/app/include/postgresql/server/pg_config.h \
+ /data/adb3.1/app/include/postgresql/server/pg_config_manual.h \
+ /data/adb3.1/app/include/postgresql/server/pg_config_os.h \
+ /data/adb3.1/app/include/postgresql/server/port.h \
+ /data/adb3.1/app/include/postgresql/server/utils/elog.h \
+ /data/adb3.1/app/include/postgresql/server/lib/stringinfo.h \
+ /data/adb3.1/app/include/postgresql/server/utils/errcodes.h \
+ /data/adb3.1/app/include/postgresql/server/utils/palloc.h \
+ /data/adb3.1/app/include/postgresql/server/fmgr.h \
+ /data/adb3.1/app/include/postgresql/server/access/xlog.h \
+ /data/adb3.1/app/include/postgresql/server/access/rmgr.h \
+ /data/adb3.1/app/include/postgresql/server/access/rmgrlist.h \
+ /data/adb3.1/app/include/postgresql/server/access/xlogdefs.h \
+ /data/adb3.1/app/include/postgresql/server/access/xloginsert.h \
+ /data/adb3.1/app/include/postgresql/server/storage/block.h \
+ /data/adb3.1/app/include/postgresql/server/storage/buf.h \
+ /data/adb3.1/app/include/postgresql/server/storage/relfilenode.h \
+ /data/adb3.1/app/include/postgresql/server/common/relpath.h \
+ /data/adb3.1/app/include/postgresql/server/storage/backendid.h \
+ /data/adb3.1/app/include/postgresql/server/access/xlogreader.h \
+ /data/adb3.1/app/include/postgresql/server/access/xlogrecord.h \
+ /data/adb3.1/app/include/postgresql/server/port/pg_crc32c.h \
+ /data/adb3.1/app/include/postgresql/server/port/pg_bswap.h \
+ /data/adb3.1/app/include/postgresql/server/datatype/timestamp.h \
+ /data/adb3.1/app/include/postgresql/server/nodes/pg_list.h \
+ /data/adb3.1/app/include/postgresql/server/nodes/nodes.h \
+ /data/adb3.1/app/include/postgresql/server/storage/fd.h \
+ /data/adb3.1/app/include/postgresql/server/miscadmin.h \
+ /data/adb3.1/app/include/postgresql/server/pgtime.h \
+ /data/adb3.1/app/include/postgresql/server/replication/walreceiver.h \
+ /data/adb3.1/app/include/postgresql/server/replication/logicalproto.h \
+ /data/adb3.1/app/include/postgresql/server/replication/reorderbuffer.h \
+ /data/adb3.1/app/include/postgresql/server/access/htup_details.h \
+ /data/adb3.1/app/include/postgresql/server/access/htup.h \
+ /data/adb3.1/app/include/postgresql/server/storage/itemptr.h \
+ /data/adb3.1/app/include/postgresql/server/storage/off.h \
+ /data/adb3.1/app/include/postgresql/server/storage/itemid.h \
+ /data/adb3.1/app/include/postgresql/server/access/tupdesc.h \
+ /data/adb3.1/app/include/postgresql/server/access/attnum.h \
+ /data/adb3.1/app/include/postgresql/server/catalog/pg_attribute.h \
+ /data/adb3.1/app/include/postgresql/server/catalog/genbki.h \
+ /data/adb3.1/app/include/postgresql/server/access/tupmacs.h \
+ /data/adb3.1/app/include/postgresql/server/access/transam.h \
+ /data/adb3.1/app/include/postgresql/server/storage/bufpage.h \
+ /data/adb3.1/app/include/postgresql/server/storage/item.h \
+ /data/adb3.1/app/include/postgresql/server/lib/ilist.h \
+ /data/adb3.1/app/include/postgresql/server/storage/sinval.h \
+ /data/adb3.1/app/include/postgresql/server/utils/hsearch.h \
+ /data/adb3.1/app/include/postgresql/server/utils/relcache.h \
+ /data/adb3.1/app/include/postgresql/server/nodes/bitmapset.h \
+ /data/adb3.1/app/include/postgresql/server/utils/snapshot.h \
+ /data/adb3.1/app/include/postgresql/server/lib/pairingheap.h \
+ /data/adb3.1/app/include/postgresql/server/utils/timestamp.h \
+ /data/adb3.1/app/include/postgresql/server/pgtime.h \
+ /data/adb3.1/app/include/postgresql/server/utils/rel.h \
+ /data/adb3.1/app/include/postgresql/server/catalog/pg_class.h \
+ /data/adb3.1/app/include/postgresql/server/catalog/pg_index.h \
+ /data/adb3.1/app/include/postgresql/server/catalog/pg_publication.h \
+ /data/adb3.1/app/include/postgresql/server/catalog/objectaddress.h \
+ /data/adb3.1/app/include/postgresql/server/storage/lockdefs.h \
+ /data/adb3.1/app/include/postgresql/server/utils/acl.h \
+ /data/adb3.1/app/include/postgresql/server/nodes/parsenodes.h \
+ /data/adb3.1/app/include/postgresql/server/nodes/lockoptions.h \
+ /data/adb3.1/app/include/postgresql/server/nodes/primnodes.h \
+ /data/adb3.1/app/include/postgresql/server/nodes/value.h \
+ /data/adb3.1/app/include/postgresql/server/pgxc/locator.h \
+ /data/adb3.1/app/include/postgresql/server/parser/parse_node.h \
+ /data/adb3.1/app/include/postgresql/server/utils/queryenvironment.h \
+ /data/adb3.1/app/include/postgresql/server/utils/array.h \
+ /data/adb3.1/app/include/postgresql/server/utils/expandeddatum.h \
+ /data/adb3.1/app/include/postgresql/server/rewrite/prs2lock.h \
+ /data/adb3.1/app/include/postgresql/server/utils/reltrigger.h \
+ /data/adb3.1/app/include/postgresql/server/replication/walsender.h \
+ /data/adb3.1/app/include/postgresql/server/storage/latch.h \
+ /data/adb3.1/app/include/postgresql/server/storage/spin.h \
+ /data/adb3.1/app/include/postgresql/server/storage/s_lock.h \
+ /data/adb3.1/app/include/postgresql/server/utils/tuplestore.h \
+ /data/adb3.1/app/include/postgresql/server/executor/tuptable.h \
+ /data/adb3.1/app/include/postgresql/server/storage/ipc.h \
+ /data/adb3.1/app/include/postgresql/server/storage/lwlock.h \
+ /data/adb3.1/app/include/postgresql/server/storage/proclist_types.h \
+ /data/adb3.1/app/include/postgresql/server/port/atomics.h \
+ /data/adb3.1/app/include/postgresql/server/port/atomics/arch-x86.h \
+ /data/adb3.1/app/include/postgresql/server/port/atomics/generic-gcc.h \
+ /data/adb3.1/app/include/postgresql/server/port/atomics/fallback.h \
+ /data/adb3.1/app/include/postgresql/server/port/atomics/generic.h \
+ /data/adb3.1/app/include/postgresql/server/storage/lwlocknames.h \
+ /data/adb3.1/app/include/postgresql/server/storage/procarray.h \
+ /data/adb3.1/app/include/postgresql/server/storage/lock.h \
+ /data/adb3.1/app/include/postgresql/server/storage/shmem.h \
+ /data/adb3.1/app/include/postgresql/server/storage/standby.h \
+ /data/adb3.1/app/include/postgresql/server/storage/standbydefs.h \
+ /data/adb3.1/app/include/postgresql/server/storage/procsignal.h \
+ /data/adb3.1/app/include/postgresql/server/utils/builtins.h \
+ /data/adb3.1/app/include/postgresql/server/utils/fmgrprotos.h
+
+/data/adb3.1/app/include/postgresql/server/postgres.h:
+
+/data/adb3.1/app/include/postgresql/server/c.h:
+
+/data/adb3.1/app/include/postgresql/server/postgres_ext.h:
+
+/data/adb3.1/app/include/postgresql/server/pg_config_ext.h:
+
+/data/adb3.1/app/include/postgresql/server/pg_config.h:
+
+/data/adb3.1/app/include/postgresql/server/pg_config_manual.h:
+
+/data/adb3.1/app/include/postgresql/server/pg_config_os.h:
+
+/data/adb3.1/app/include/postgresql/server/port.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/elog.h:
+
+/data/adb3.1/app/include/postgresql/server/lib/stringinfo.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/errcodes.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/palloc.h:
+
+/data/adb3.1/app/include/postgresql/server/fmgr.h:
+
+/data/adb3.1/app/include/postgresql/server/access/xlog.h:
+
+/data/adb3.1/app/include/postgresql/server/access/rmgr.h:
+
+/data/adb3.1/app/include/postgresql/server/access/rmgrlist.h:
+
+/data/adb3.1/app/include/postgresql/server/access/xlogdefs.h:
+
+/data/adb3.1/app/include/postgresql/server/access/xloginsert.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/block.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/buf.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/relfilenode.h:
+
+/data/adb3.1/app/include/postgresql/server/common/relpath.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/backendid.h:
+
+/data/adb3.1/app/include/postgresql/server/access/xlogreader.h:
+
+/data/adb3.1/app/include/postgresql/server/access/xlogrecord.h:
+
+/data/adb3.1/app/include/postgresql/server/port/pg_crc32c.h:
+
+/data/adb3.1/app/include/postgresql/server/port/pg_bswap.h:
+
+/data/adb3.1/app/include/postgresql/server/datatype/timestamp.h:
+
+/data/adb3.1/app/include/postgresql/server/nodes/pg_list.h:
+
+/data/adb3.1/app/include/postgresql/server/nodes/nodes.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/fd.h:
+
+/data/adb3.1/app/include/postgresql/server/miscadmin.h:
+
+/data/adb3.1/app/include/postgresql/server/pgtime.h:
+
+/data/adb3.1/app/include/postgresql/server/replication/walreceiver.h:
+
+/data/adb3.1/app/include/postgresql/server/replication/logicalproto.h:
+
+/data/adb3.1/app/include/postgresql/server/replication/reorderbuffer.h:
+
+/data/adb3.1/app/include/postgresql/server/access/htup_details.h:
+
+/data/adb3.1/app/include/postgresql/server/access/htup.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/itemptr.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/off.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/itemid.h:
+
+/data/adb3.1/app/include/postgresql/server/access/tupdesc.h:
+
+/data/adb3.1/app/include/postgresql/server/access/attnum.h:
+
+/data/adb3.1/app/include/postgresql/server/catalog/pg_attribute.h:
+
+/data/adb3.1/app/include/postgresql/server/catalog/genbki.h:
+
+/data/adb3.1/app/include/postgresql/server/access/tupmacs.h:
+
+/data/adb3.1/app/include/postgresql/server/access/transam.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/bufpage.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/item.h:
+
+/data/adb3.1/app/include/postgresql/server/lib/ilist.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/sinval.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/hsearch.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/relcache.h:
+
+/data/adb3.1/app/include/postgresql/server/nodes/bitmapset.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/snapshot.h:
+
+/data/adb3.1/app/include/postgresql/server/lib/pairingheap.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/timestamp.h:
+
+/data/adb3.1/app/include/postgresql/server/pgtime.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/rel.h:
+
+/data/adb3.1/app/include/postgresql/server/catalog/pg_class.h:
+
+/data/adb3.1/app/include/postgresql/server/catalog/pg_index.h:
+
+/data/adb3.1/app/include/postgresql/server/catalog/pg_publication.h:
+
+/data/adb3.1/app/include/postgresql/server/catalog/objectaddress.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/lockdefs.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/acl.h:
+
+/data/adb3.1/app/include/postgresql/server/nodes/parsenodes.h:
+
+/data/adb3.1/app/include/postgresql/server/nodes/lockoptions.h:
+
+/data/adb3.1/app/include/postgresql/server/nodes/primnodes.h:
+
+/data/adb3.1/app/include/postgresql/server/nodes/value.h:
+
+/data/adb3.1/app/include/postgresql/server/pgxc/locator.h:
+
+/data/adb3.1/app/include/postgresql/server/parser/parse_node.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/queryenvironment.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/array.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/expandeddatum.h:
+
+/data/adb3.1/app/include/postgresql/server/rewrite/prs2lock.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/reltrigger.h:
+
+/data/adb3.1/app/include/postgresql/server/replication/walsender.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/latch.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/spin.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/s_lock.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/tuplestore.h:
+
+/data/adb3.1/app/include/postgresql/server/executor/tuptable.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/ipc.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/lwlock.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/proclist_types.h:
+
+/data/adb3.1/app/include/postgresql/server/port/atomics.h:
+
+/data/adb3.1/app/include/postgresql/server/port/atomics/arch-x86.h:
+
+/data/adb3.1/app/include/postgresql/server/port/atomics/generic-gcc.h:
+
+/data/adb3.1/app/include/postgresql/server/port/atomics/fallback.h:
+
+/data/adb3.1/app/include/postgresql/server/port/atomics/generic.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/lwlocknames.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/procarray.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/lock.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/shmem.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/standby.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/standbydefs.h:
+
+/data/adb3.1/app/include/postgresql/server/storage/procsignal.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/builtins.h:
+
+/data/adb3.1/app/include/postgresql/server/utils/fmgrprotos.h:
